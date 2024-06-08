@@ -1,3 +1,0 @@
-C:/Users/Shadman/CLionProjects/Tic Tac Toe/cmake-build-debug/CMakeFiles/Tic_Tac_Toe.dir
-C:/Users/Shadman/CLionProjects/Tic Tac Toe/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Shadman/CLionProjects/Tic Tac Toe/cmake-build-debug/CMakeFiles/rebuild_cache.dir
