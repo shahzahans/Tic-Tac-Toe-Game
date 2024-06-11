@@ -12,7 +12,7 @@ using namespace std;
 class tictactoe {
 public:
     void myTable();
-    bool gameFunctions();
+    bool gameConditions();
 };
 
 
