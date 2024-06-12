@@ -13,18 +13,21 @@ tictactoe::tictactoe() {
     playermoves = 'X';
 }
 
-void tictactoe::myTable() {
+void tictactoe::printBoard() {
     cout << "\tTic Toe Game\n";
     cout << "\t   X | O\n\n";
-
-
-    cout << "\t___|___|___" << endl;
-    cout << "\t___|___|___" << endl;
-    cout << "\t   |   |   " << endl;
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; j++) {
+            cout << " " << board[i][j];
+        }
+        cout << "\t";
+        if (i < 2) cout << "---|---|---\n";
+    }
+    cout << "\n";
 }
 
 bool tictactoe::gameConditions() {
-    for (int i = 0; i < 0; i++){
+    for (int i = 0; i < 3; i++){
         if (board[i][0] == playermoves && board[i][1] == playermoves && board[i][2]){
             return true;
         }
@@ -47,8 +50,8 @@ void tictactoe::playerTurn(){
     }
 }
 
-bool tictactoe::marking(){
-    if (row < 3 && row >= 0 && col < 3 && col >= 0 && board[row][col] = ' '){
+bool tictactoe::marking(int row, int col) {
+    if (row < 3 && row >= 0 && col < 3 && col >= 0 && board[row][col] == ' '){
         board[row][col] = playermoves;
         return true;
     }
@@ -58,7 +61,7 @@ bool tictactoe::marking(){
 bool tictactoe::Draw(){
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
-            if (board[i][j]){
+            if (board[i][j] == ' '){
                 return true;
             }
         }
@@ -66,25 +69,31 @@ bool tictactoe::Draw(){
     return false;
 }
 
-void tictactoe::printBoard() {
-    cout << "\n";
-    for (int i = 0; i < 3; ++i) {
-        for (int j = 0; j < 3; j++) {
-            cout << " " << board[i][j];
-            if (j < 2) cout << " |";
-        }
-        cout << "\n";
-        if (i < 2) cout << "---|---|---\n";
-    }
-    cout << "\n";
-}
-
-void play(){
+void tictactoe::play(){
     int row, col;
     bool gameOver = false;
     while (!gameOver){
-        pri
-    }
+        printBoard();
+        cout << "Player " << playermoves << ", enter your move (row & coloumn)";
+        cin >> row >> col;
 
-    
+        if (marking(row, col)){
+            if (gameConditions()){
+                printBoard();
+                cout << "Player " << playermoves << " wins!\n";
+                gameOver = true;
+            }
+            else if (Draw()){
+                printBoard();
+                cout << "!GAME IS DRAWN!";
+                gameOver =true;
+            }
+            else {
+                playerTurn();
+            }
+        }
+        else {
+            cout << "Wrong Moves Made! Try Again\n";
+        }
+    }
 }
