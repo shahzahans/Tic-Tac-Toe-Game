@@ -10,9 +10,17 @@ using namespace std;
 #include <string>
 
 class tictactoe {
+private:
+    char board[3][3];
+    char playermoves;
 public:
+    tictactoe();
     void myTable();
     bool gameConditions();
+    void playerTurn();
+    bool marking;
+    void play();
+    void printBoard();
 };
 
 

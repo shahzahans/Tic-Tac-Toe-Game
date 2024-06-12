@@ -15,18 +15,18 @@ void tictactoe::myTable() {
 
 }
 
-bool tictactoe::gameConditions(char board [3][3]) {
-    if (board[0][0] == movesMade && board[1][1] == movesMade && board[2][2]){
+bool tictactoe::gameConditions() {
+    if (board[0][0] == playermoves && board[1][1] == playermoves && board[2][2]){
         return true;
     }
-    if (board[0][2] == movesMade && board[1][1] == movesMade && board[2][0]){
+    if (board[0][2] == playermoves && board[1][1] == playermoves && board[2][0]){
         return true;
     }
     for (int i = 0; i < 0; i++){
-        if (board[i][0] == movesMade && board[i][1] == movesMade && board[i][2]){
+        if (board[i][0] == playermoves && board[i][1] == playermoves && board[i][2]){
             return true;
         }
-        if (board[0][i] == movesMade && board[1][i] == movesMade && board[2][i]){
+        if (board[0][i] == playermoves && board[1][i] == playermoves && board[2][i]){
             return true;
         }
     }
