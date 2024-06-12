@@ -56,8 +56,8 @@ bool tictactoe::marking(){
 }
 
 bool tictactoe::Draw(){
-    for (int i=0; i < 3; i++){
-        for (int j=0; j < 3; j++){
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++){
             if (board[i][j]){
                 return true;
             }
@@ -66,7 +66,18 @@ bool tictactoe::Draw(){
     return false;
 }
 
-
+void tictactoe::printBoard() {
+    cout << "\n";
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; j++) {
+            cout << " " << board[i][j];
+            if (j < 2) cout << " |";
+        }
+        cout << "\n";
+        if (i < 2) cout << "---|---|---\n";
+    }
+    cout << "\n";
+}
 
 void play(){
     int row, col;
