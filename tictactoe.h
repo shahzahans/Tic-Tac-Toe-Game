@@ -18,7 +18,7 @@ public:
     void myTable();
     bool gameConditions();
     void playerTurn();
-    bool marking;
+    bool marking();
     void play();
     void printBoard();
 };

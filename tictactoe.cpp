@@ -37,3 +37,15 @@ bool tictactoe::gameConditions() {
     }
     return false;
 }
+
+void playerTurn(){
+
+}
+
+bool marking(){
+
+}
+
+void play(){
+    
+}
