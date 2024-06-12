@@ -48,9 +48,32 @@ void tictactoe::playerTurn(){
 }
 
 bool tictactoe::marking(){
-    
+    if (row < 3 && row >= 0 && col < 3 && col >= 0 && board[row][col] = ' '){
+        board[row][col] = playermoves;
+        return true;
+    }
+    return false;
 }
 
+bool tictactoe::Draw(){
+    for (int i=0; i < 3; i++){
+        for (int j=0; j < 3; j++){
+            if (board[i][j]){
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+
+
 void play(){
+    int row, col;
+    bool gameOver = false;
+    while (!gameOver){
+        pri
+    }
+
     
 }
