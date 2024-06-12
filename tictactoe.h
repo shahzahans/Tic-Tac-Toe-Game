@@ -21,6 +21,7 @@ public:
     bool marking();
     void play();
     void printBoard();
+    void Draw();
 };
 
 

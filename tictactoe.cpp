@@ -38,12 +38,17 @@ bool tictactoe::gameConditions() {
     return false;
 }
 
-void playerTurn(){
-
+void tictactoe::playerTurn(){
+    if (playermoves == 'X'){
+        playermoves = 'O';
+    }
+    else{
+        playermoves = 'X';
+    }
 }
 
-bool marking(){
-
+bool tictactoe::marking(){
+    
 }
 
 void play(){
