@@ -19,7 +19,7 @@ tictactoe::tictactoe() {
 
 // Function to print the current state of the board
 void tictactoe::printBoard() {
-    cout << "\tWelcome to Shad's Tic Toe Game\n";
+    cout << "Welcome to Shad's Tic Toe Game\n";
     cout << "\t   X | O\n\n";
     // Print the board row by row
     for (int i = 0; i < 3; ++i) {
@@ -93,7 +93,7 @@ void tictactoe::play() {
     // Continue the game until it's over
     while (!gameOver) {
         printBoard(); // Print the board through function calling
-        cout << "Player " << playermoves << ", enter your move (row & column): ";
+        cout << "Player " << playermoves << ", make your move by entering (row & column): ";
         // Get and validate the player's input
         while (!(cin >> row >> col) || row < 0 || row > 2 || col < 0 || col > 2) {
             cout << "Invalid input. Please enter row and column numbers (0-2): ";
