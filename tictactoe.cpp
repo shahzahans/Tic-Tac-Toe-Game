@@ -74,7 +74,7 @@ bool tictactoe::marking(int row, int col) {
 }
 
 // Check for Draw
-bool tictactoe::Draw(){
+bool tictactoe::conditionDraw(){
     // Check if any cell is still empty
     for (int i = 0; i < 3; i++){
         for (int j = 0; j < 3; j++){
@@ -107,7 +107,7 @@ void tictactoe::play() {
                 cout << "Player " << playermoves << " wins!\n";
                 gameOver = true; // End the game if there's a win
             }
-            else if (Draw()) { // Check for a draw
+            else if (conditionDraw()) { // Check for a draw
                 printBoard();
                 cout << "Game is drawn!\n";
                 gameOver = true; // End the game if it's a draw
